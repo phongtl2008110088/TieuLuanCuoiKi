@@ -8,31 +8,6 @@ public class main {
     static Scanner bienNhap = new Scanner(System.in);
 	public static KhoHang kho = new KhoHang();
 	public static void main(String[] args) {
-        Date a = new Date();
-		
-		DienMay headDM = new DienMay(1, "1", 1, a);
-		SanhSu headSS = new SanhSu(2, "2", 2, a);
-		ThucPham headTP = new ThucPham(3, "3", 3, a);
-		    
-		DienMay DM1 = new DienMay(4, "4", 4, a);
-		headDM.next = DM1;
-		SanhSu SS1 = new SanhSu(5, "5", 5, a);
-		headSS.next = SS1;
-		ThucPham TP1 = new ThucPham(6, "6", 6, a);
-		headTP.next = TP1;
-		
-		DienMay DM2 = new DienMay(7, "7", 7, a);
-		DM1.next = DM2;
-		SanhSu SS2 = new SanhSu(8, "8", 9, a);
-		SS1.next = SS2;
-		ThucPham TP2 = new ThucPham(9, "9", 9, a);
-		TP1.next = TP2;
-		
-		kho.headDienMay = headDM;
-		kho.headSanhSu = headSS;
-		kho.headThucPham = headTP;
-		
-
      Scanner sc = new Scanner(System.in);
 		int key;
 		while (true){
@@ -57,19 +32,19 @@ public class main {
     }
 }
 
-public static void ThemHang(KhoHang kho) {
+public static void ThemHang(KhoHang khoHang) {
     kho.themSanPham(bienNhap);
 }
-public static void XoaHang(KhoHang kho) {
+public static void XoaHang(KhoHang khoHang) {
     kho.xoaSanPham(bienNhap);
 }
-public static void TimTheoLoai(KhoHang kho) {
+public static void TimTheoLoai(KhoHang khoHang) {
     kho.timSanPham();
 }
-public static void in(KhoHang kho) {
+public static void in(KhoHang khoHang) {
     kho.inTTSanPham();
 }
-public static void ThongKe(KhoHang kho) {
+public static void ThongKe(KhoHang khoHang) {
     kho.thongKeSanPham(bienNhap);
 }
 
