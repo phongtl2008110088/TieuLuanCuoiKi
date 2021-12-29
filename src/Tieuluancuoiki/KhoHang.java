@@ -20,64 +20,82 @@ if (head == null) {
 return empty;
 }
 	public void themSanPham(Scanner scanner){
-		System.out.println("Chon Vi Tri Them Hang");
-		System.out.println("1/ Them vao dau danh sach");
-		System.out.println("2/ Them vao cuoi danh sach");
-		System.out.println("Lua chon  ");
-	int Them = scanner.nextInt();
+		System.out.println("Ban muon them vao vi tri nao");
+        System.out.println("1/ Them hang vao dau danh sach");
+        System.out.println("2/ Them hang vao cuoi danh sach");
+        System.out.println("Lua chon ");
+        int Them = scanner.nextInt();
+        
+        
+        while (Them == 1) {// thêm đầu
+            HangHoa hangHoa = new HangHoa();
+            Node newNode = new Node(hangHoa);
+            newNode.data.NhapThongTin(scanner);
+            if (isEmpty()==true) {
+                head = newNode;
+                tail = newNode;
+            }else{
+                newNode.next = head;
+                head  = newNode;  
+            } 
+            System.out.println("da them hang hoa");    
+        } if (Them == 2) { // thêm cuối
+            HangHoa hangHoa = new HangHoa();
+            Node newNode = new Node(hangHoa);
+            newNode.data.NhapThongTin(scanner);
+            if (isEmpty()==true) {
+                head = newNode;
+                tail = newNode;
+            }else{
+                tail.next = newNode;
+                tail  = newNode;          
+            }
+            System.out.println("da them hang hoa");
+        }
+    }
+	public void xoaSanPham(Scanner scanner){
+	System.out.println("Ban muon xoa loai hang nao?");
+	System.out.println("1/ xoa hang hoa dau danh sach");
+	System.out.println("2/ xoa hang hoa cuoi danh sach");
+	System.out.println("Lua chon ");
+	int Xoa = scanner.nextInt();
 	
-	while (Them == 1) {
-		HangHoa hangHoa = new HangHoa();
-		Node newNode = new Node(hangHoa);
-		newNode.data.NhapThongTin(scanner);
-		if (isEmpty()==true) {
-			head = newNode;
-			tail = newNode;
-		}else{
-			newNode.next = head;
-			head  = newNode;  
-		} 
-		System.out.println("Da them vao danh sach");    
+	while (Xoa == 1) {  //Xóa đầu
+				if(isEmpty() == true){
+            	System.out.println("Danh sach rong.");
+           		 return;
+        }
+        // Giá trị của Node được Node head trỏ đến sẽ được gán vào Node head.
+        		head = head.next;
+    }
+	if (Xoa == 2) //Xóa cuối
+		if (isEmpty()) {
+		System.out.println("Danh sach rong.");
 	}
-	 if (Them == 2) { 
-		HangHoa hangHoa = new HangHoa();
-		Node newNode = new Node(hangHoa);
-		newNode.data.NhapThongTin(scanner);
-		if (isEmpty()==true) {
-			head = newNode;
-			tail = newNode;
-		}else{
-			tail.next = newNode;
-			tail  = newNode;          
-		}
-		System.out.println("Da them vao danh sach");
+		Node current = head;
+	while (current !=null) {
+		// Nếu Node current trỏ đến Node tail thì Node current sẽ gán vào Node tail và Node tail sẽ trỏ đến Node rỗng.
+	   if (current.next == tail) {
+		   tail = current;
+		   tail.next = null;
+	   } 
+	   current = current.next;
 	}
-}
-	public void inTTSanPham() {
-Node current = head;
-if (head == null) {
-	System.out.println("Danh Sach Trong");
-} else {
-	while (current != null) {
-		current.data.inThongTin();
-		current = current.next;
-	}
-}
 }
 	public void timSanPham(){
-	Scanner sc = new Scanner(System.in);
-	System.out.print("Hay nhap loai hang hoa can tim: ");
-	String loaiCanTim = sc.nextLine();
-	Node current = head;
-	while(current != null){
-		if(current.data.Loai.equals(loaiCanTim)){
-			System.out.println("Hang hoa da duoc tim : ");
-			current.data.inThongTin();               
-		}
-		current = current.next;
-	}
-	System.out.println("Khong co san pham ");
-}
+		Scanner sc = new Scanner(System.in);
+                System.out.print("Hay nhap loai hang hoa can tim: ");
+                String loaiCanTim = sc.nextLine();
+                Node current = head;
+                while(current != null){
+                    if(current.data.Loai.equals(loaiCanTim)){
+                        System.out.println("Loai hang hoa can tim: ");
+                        current.data.inThongTin();               
+                    }
+                    current = current.next;
+                }
+                System.out.println("khong có loai hang hoa can tim");
+            }
 void thongKeSanPham(Scanner scanner){
 Node current = head;
 int TongSoLuong = 0;

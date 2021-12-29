@@ -9,7 +9,6 @@ public class HangHoa {
 	String Ten;
 	double Gia;
     int SoLuong;
-	Date NgayNhapKho;
 	HangHoa next;
 	Scanner sc = new Scanner(System.in);
 
@@ -17,13 +16,12 @@ public class HangHoa {
 		
 	}
 	
-	HangHoa(String _Loai, String _Maid, String _ten, double _Gia,int _SoLuong, Date _NgayNhapKho){
+	HangHoa(String _Loai, String _Maid, String _ten, double _Gia,int _SoLuong){
         Loai = _Loai;
 		Id = _Maid;
 		Ten = _ten;
 	    Gia = _Gia;
         SoLuong = _SoLuong;
-		NgayNhapKho = _NgayNhapKho;
 
 	}
 	
@@ -42,10 +40,6 @@ public class HangHoa {
 
         System.out.print("So luong hang hoa ton kho: ");
         SoLuong = sc.nextInt();
-		
-		System.out.print("Ngay nhap kho: ");
-        long Date = sc.nextLong();
-		NgayNhapKho = new Date();
 	}
 	
 	public void inThongTin() {
@@ -55,7 +49,6 @@ public class HangHoa {
 		System.out.println("Ma hang : " + Id);
 		System.out.println("Gia : " + Gia);
         System.out.println("So luong hang hoa : " + SoLuong);
-		System.out.println("Ngay nhap kho : " + NgayNhapKho);
         System.out.println("----------------------------");
 		 
 	}
