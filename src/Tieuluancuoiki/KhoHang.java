@@ -140,7 +140,7 @@ public void xoaSanPham(Scanner scanner){
 public void inTTSanPham() {
 Node current = head;
 if (head == null) {
-	System.out.println("trong");
+	System.out.println("Danh Sach Trong");
 } else {
 	while (current != null) {
 		current.data.inThongTin();
@@ -164,26 +164,26 @@ void timSanPham(){
 }
 void thongKeSanPham(Scanner scanner){
 Node current = head;
-int Max1 = 0;
-double Max2 = 0;
+int TongSoLuong = 0;
+int TongGiaTri = 0;
 if (head == null) {
-	System.out.println("trong");
+	System.out.println("Danh Sach Trong");
 } else {
 	while (current != null) {
-		Max1 += current.data.SoLuong;
-		Max2 += current.data.Gia; 
+		TongSoLuong += current.data.SoLuong;
+		TongGiaTri += current.data.Gia; 
 		current = current.next;
 	}
 }
-System.out.println("Tong so luong hang hoa nhap kho: " +Max1);
-System.out.println("Tong gia tri hang hoa nhap kho: " +Max2);     
+System.out.println("Tong so luong hang hoa nhap kho: " +TongSoLuong);
+System.out.println("Tong gia tri hang hoa nhap kho: " +TongGiaTri);     
 }
 
 void print(){
 Node current;
 current = head;
 if (head==null) {
-	System.out.println("Trong");
+	System.out.println("Danh Sach Trong");
 	return;
   } 
  }
