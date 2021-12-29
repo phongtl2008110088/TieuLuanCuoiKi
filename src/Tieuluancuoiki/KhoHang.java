@@ -82,6 +82,14 @@ return empty;
 	   current = current.next;
 	}
 }
+    public void inTTSanPham(){
+    Node current;
+    current = head;
+    if (head==null) {
+        System.out.println("Danh Sach Trong");
+        return;
+      } 
+     }
 	public void timSanPham(){
 		Scanner sc = new Scanner(System.in);
                 System.out.print("Hay nhap loai hang hoa can tim: ");
@@ -96,7 +104,7 @@ return empty;
                 }
                 System.out.println("khong có loai hang hoa can tim");
             }
-void thongKeSanPham(Scanner scanner){
+   public void thongKeSanPham(Scanner scanner){
 Node current = head;
 int TongSoLuong = 0;
 int TongGiaTri = 0;
@@ -112,13 +120,4 @@ if (head == null) {
 System.out.println("Tong so luong hang hoa nhap kho: " +TongSoLuong);
 System.out.println("Tong gia tri hang hoa nhap kho: " +TongGiaTri);     
 }
-
-void print(){
-Node current;
-current = head;
-if (head==null) {
-	System.out.println("Danh Sach Trong");
-	return;
-  } 
- }
 }
