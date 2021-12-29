@@ -49,14 +49,14 @@ public class HangHoa {
 	}
 	
 	public void inThongTin() {
-        System.out.println("=============================");
+        System.out.println("--------------------");
         System.out.println("Loai hang: " + Loai);
 		System.out.println("ten hang: " + Ten);
 		System.out.println("Ma hang : " + Id);
 		System.out.println("Gia : " + Gia);
         System.out.println("So luong hang hoa : " + SoLuong);
 		System.out.println("Ngay nhap kho : " + NgayNhapKho);
-        System.out.println("==============================");
+        System.out.println("----------------------------");
 		 
 	}
 	

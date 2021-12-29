@@ -23,22 +23,26 @@ public class main {
 		
 		DienMay DM2 = new DienMay(7, "7", 7, a);
 		DM1.next = DM2;
-		SanhSu SS2 = new SanhSu(8, "8", 8, a);
+		SanhSu SS2 = new SanhSu(8, "8", 9, a);
 		SS1.next = SS2;
 		ThucPham TP2 = new ThucPham(9, "9", 9, a);
 		TP1.next = TP2;
+		
+		kho.headDienMay = headDM;
+		kho.headSanhSu = headSS;
+		kho.headThucPham = headTP;
+		
 
      Scanner sc = new Scanner(System.in);
 		int key;
 		while (true){
-        	System.out.println("------------MENU---------");
+        	System.out.println("___________MENU_________");
             System.out.println("1)  Them hang			");
             System.out.println("2)  Xoa hang 	");
             System.out.println("3)  In thong tin hang hoa ");
             System.out.println("4)  Tim hàng theo loai");
             System.out.println("5)  Thong ke hang hoa 	");
             System.out.println("6)  Thoat         		");
-            System.out.println("-------------------------");
             System.out.print(" Hay chon chuc nang: ");
             key = sc.nextInt();
             switch(key){
