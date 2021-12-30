@@ -19,40 +19,40 @@ if (head == null) {
 }
 return empty;
 }
-	public void themSanPham(Scanner scanner){
-		System.out.println("Ban muon them vao vi tri nao");
-        System.out.println("1/ Them hang vao dau danh sach");
-        System.out.println("2/ Them hang vao cuoi danh sach");
-        System.out.println("Lua chon ");
-        int Them = scanner.nextInt();
-        
-        
-        while (Them == 1) {// thêm đầu
-            HangHoa hangHoa = new HangHoa();
-            Node newNode = new Node(hangHoa);
-            newNode.data.NhapThongTin(scanner);
-            if (isEmpty()==true) {
-                head = newNode;
-                tail = newNode;
-            }else{
-                newNode.next = head;
-                head  = newNode;  
-            } 
-            System.out.println("da them hang hoa");    
-        } if (Them == 2) { // thêm cuối
-            HangHoa hangHoa = new HangHoa();
-            Node newNode = new Node(hangHoa);
-            newNode.data.NhapThongTin(scanner);
-            if (isEmpty()==true) {
-                head = newNode;
-                tail = newNode;
-            }else{
-                tail.next = newNode;
-                tail  = newNode;          
-            }
-            System.out.println("da them hang hoa");
+public void themSanPham(Scanner scanner){
+    System.out.println("Ban muon them vao vi tri nao");
+    System.out.println("1/ Them hang vao dau danh sach");
+    System.out.println("2/ Them hang vao cuoi danh sach");
+    System.out.println("Lua chon ");
+    int Them = scanner.nextInt();
+    
+    
+    while (Them == 1) {// thêm đầu
+        HangHoa hangHoa = new HangHoa();
+        Node newNode = new Node(hangHoa);
+        newNode.data.nhapThongTin(scanner);
+        if (isEmpty()==true) {
+            head = newNode;
+            tail = newNode;
+        }else{
+            newNode.next = head;
+            head  = newNode;  
+        } 
+        System.out.println("da them hang hoa");    
+    } if (Them == 2) { // thêm cuối
+        HangHoa hangHoa = new HangHoa();
+        Node newNode = new Node(hangHoa);
+        newNode.data.nhapThongTin(scanner);
+        if (isEmpty()==true) {
+            head = newNode;
+            tail = newNode;
+        }else{
+            tail.next = newNode;
+            tail  = newNode;          
         }
+        System.out.println("da them hang hoa");
     }
+}
 	public void xoaSanPham(Scanner scanner){
 	System.out.println("Ban muon xoa loai hang nao?");
 	System.out.println("1/ xoa hang hoa dau danh sach");

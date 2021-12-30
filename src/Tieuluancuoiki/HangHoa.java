@@ -25,7 +25,7 @@ public class HangHoa {
 
 	}
 	
-	public void NhapThongTin(Scanner scanner) {
+	public void nhapThongTin(Scanner scanner) {
         System.out.print("Loai hang hoa: ");
         Loai = sc.nextLine();
 		

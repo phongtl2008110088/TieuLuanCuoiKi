@@ -47,5 +47,4 @@ public static void in(KhoHang khoHang) {
 public static void ThongKe(KhoHang khoHang) {
     kho.thongKeSanPham(bienNhap);
 }
-
 }
